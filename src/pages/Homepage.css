@@ -1,0 +1,8 @@
+.home-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
