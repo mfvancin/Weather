@@ -1,0 +1,29 @@
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+  
+.city span {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+  
+.city button {
+    background-color: #DF744A;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+  
+.city button:hover {
+    background-color: #DF744A;
+}
