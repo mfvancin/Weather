@@ -13,7 +13,7 @@ function CityPage({ cities, setCities }) {
   const handleDelete = () => {
     const updatedCities = cities.filter(city => city !== cityName);
     setCities(updatedCities);
-    window.location.href = "/my-places";
+    window.location.href = "./MyPlaces";
   };
 
   const handleAddCity = () => {

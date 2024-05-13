@@ -4,7 +4,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <p>The Weather Page</p>
+      <p className="text">The Weather Page</p>
     </footer>
   );
 }
