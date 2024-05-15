@@ -24,17 +24,6 @@ function CityPage({ cities, setCities }) {
   return (
     <div>
       <h2>{cityName}</h2>
-      <button onClick={handleEdit}>Edit</button>
-      <button onClick={handleDelete}>Delete</button>
-      <div>
-        <input
-          type="text"
-          value={newCityName}
-          onChange={(e) => setNewCityName(e.target.value)}
-          placeholder="Enter new city name"
-        />
-        <button onClick={handleAddCity}>Add City</button>
-      </div>
     </div>
   );
 }

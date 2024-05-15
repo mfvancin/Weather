@@ -23,9 +23,13 @@
     border-radius: 5px;
     cursor: pointer;
     width: 100px;
+    margin-bottom: 20px;
 }
   
 .add-city-button:hover {
     background-color: #0056b3;
 }
-  
+.weather-image-large {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
