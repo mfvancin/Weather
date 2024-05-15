@@ -124,7 +124,11 @@ function MyPlaces() {
               <h2>{city.name}</h2>
               <p>Temperature: {city.temperature}°C</p>
               <p>Weather: {city.weatherDescription}</p>
-              <img src={city.icon} alt="Weather Icon" />
+              <img 
+                src={city.icon} 
+                alt="Weather Icon" 
+                className="weather-image-large" 
+              />
             </div>
           )}
           <button onClick={() => handleEdit(index)}>Edit</button>
