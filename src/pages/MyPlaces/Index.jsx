@@ -33,7 +33,7 @@ function MyPlaces() {
   }, []);
 
   const getWeatherIcon = (weather) => {
-    switch (weather.toLowerCase()) {
+    switch (weather) {
       case "Clear":
         return "src/images/sunny.png";
       case "Clouds":
@@ -48,7 +48,7 @@ function MyPlaces() {
 
   const handleEdit = (index) => {
     setEditedCityIndex(index); 
-    setEditedCityName(cities[index]); 
+    setEditedCityName(""); 
   };
 
   const handleSaveEdit = async () => {
@@ -58,22 +58,27 @@ function MyPlaces() {
           `https://api.openweathermap.org/data/2.5/weather?q=${editedCityName}&appid=${API_KEY}&units=metric`
         );
         const { data } = response;
-        const updatedCity = {
-          name: editedCityName,
-          temperature: data.main.temp,
-          weatherDescription: data.weather[0].description,
-          icon: getWeatherIcon(data.weather[0].main),
-        };
-        const updatedCities = [...cities];
-        updatedCities[editedCityIndex] = updatedCity; 
+        const updatedCities = cities.map((city, index) => {
+          if (index === editedCityIndex) {
+            return {
+              ...city,
+              name: editedCityName,
+              temperature: data.main.temp,
+              weatherDescription: data.weather[0].description,
+              icon: getWeatherIcon(data.weather[0].main),
+            };
+          }
+          return city;
+        });
         setCities(updatedCities);
-        setEditedCityIndex(null); 
-        setEditedCityName(""); 
+        setEditedCityIndex(null);
+        setEditedCityName("");
       } catch (error) {
         console.error("Error fetching weather data:", error);
       }
     }
   };
+  
 
   const handleCancelEdit = () => {
     setEditedCityIndex(null); 
@@ -113,6 +118,7 @@ function MyPlaces() {
             <div>
               <input
                 type="text"
+                placeholder="Enter city name"
                 value={editedCityName}
                 onChange={(e) => setEditedCityName(e.target.value)}
               />
@@ -122,13 +128,13 @@ function MyPlaces() {
           ) : (
             <div>
               <h2>{city.name}</h2>
-              <p>Temperature: {city.temperature}°C</p>
-              <p>Weather: {city.weatherDescription}</p>
               <img 
-                src={city.icon} 
+                src={getWeatherIcon(city.icon)} 
                 alt="Weather Icon" 
                 className="weather-image-large" 
               />
+              <p>Temperature: {city.temperature}°C</p>
+              <p>Weather: {city.weatherDescription}</p>
             </div>
           )}
           <button onClick={() => handleEdit(index)}>Edit</button>

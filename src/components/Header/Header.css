@@ -4,13 +4,15 @@
     padding: 1rem;
     border-radius: 10px;
     width: 100%;
-    height: 100px;
-    margin-bottom: 50px;
-    margin-top: 0px;
+    height: 75px;
+    margin-bottom: 100px;
+    top: 0;
+    left: 0;
+    position: fixed;
 }
 
 .header-image {
-    width: 150px;
+    width: 100px;
     margin-top: -47px;
 }
   
@@ -26,9 +28,10 @@
 }
   
 .nav-item {
-    margin-left: 100px;
-    margin-right: 200px;
-    margin-top: 35px;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 240px;
+    margin-left: 240px;
 }
   
 .nav-link {

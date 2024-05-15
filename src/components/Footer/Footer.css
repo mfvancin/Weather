@@ -9,10 +9,13 @@
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    margin-bottom: 0px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
 }
 
 .text {
     width: 100%;
     text-align: center;
 }
+

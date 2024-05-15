@@ -4,6 +4,7 @@
     padding: 20px;
     background-color: #4b98e4;
     border: none;
+    flex-direction: column;
 }
   
 .button {
