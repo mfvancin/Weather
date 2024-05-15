@@ -9,7 +9,6 @@ function About() {
         <a
           href="https://github.com/mfvancin"
           target="_blank"
-          rel="noopener noreferrer"
           className="button"
         >
           GitHub
@@ -17,7 +16,6 @@ function About() {
         <a
           href="https://www.linkedin.com/in/manuele-vancin-80793b2b1"
           target="_blank"
-          rel="noopener noreferrer"
           className="button"
         >
           LinkedIn

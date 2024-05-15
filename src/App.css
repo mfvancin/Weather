@@ -40,3 +40,11 @@
 .read-the-docs {
   color: black;
 }
+
+.header {
+  margin-top: 0px;
+}
+ 
+.footer {
+  margin-bottom: 0px;
+}

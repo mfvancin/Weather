@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import CityPage from "../CityPage/Index";
 import "./MyPlaces.css";
 
+import "../Add/Index.jsx"
+
 function MyPlaces() {
   const [cities, setCities] = useState(["Lisbon", "São Paulo", "Tokyo"]);
 
@@ -18,16 +20,17 @@ function MyPlaces() {
 
   return (
     <div>
-      <h2>My Favorite Weather Cities</h2>
-      {cities.map((city, index) => (
-        <Link key={index} to={"../CityPage/Index"} className="city-link">
-          <CityPage
-            cityName={city}
-            onEdit={() => handleEdit(index)}
-            onDelete={() => handleDelete(index)}
-          />
-        </Link>
+      {cities.map((index) => (
+        <div key={index} className="city-container">
+          <button onClick={() => handleEdit(index)}>Edit</button>
+          <button onClick={() => handleDelete(index)}>Delete</button>
+        </div>
       ))}
+      <div>
+      <Link to="/Add" className="add-city-button">
+          Add City
+      </Link>
+      </div>
     </div>
   );
 }

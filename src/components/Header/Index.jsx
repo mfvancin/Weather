@@ -1,27 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Header.css"; // Importando o arquivo de estilos CSS
+import "./Header.css";
 
 function Header() {
   return (
     <header className="header">
-      <div className="header-container container">
-        <h1 className="header-title">The Weather Page</h1>
+      <div className="header-container">
+        <h1><img className="header-image" src="src/images/WeatherLogo.png"/></h1>
         <nav>
           <ul className="nav-list">
             <li className="nav-item">
               <Link to="/" className="nav-link">
-                Home
+                HOME
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/MyPlaces" className="nav-link">
-                My Places
+                MY PLACES
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/About" className="nav-link">
-                About
+                ABOUT
               </Link>
             </li>
           </ul>
