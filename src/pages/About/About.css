@@ -12,12 +12,12 @@
     padding: 10px 20px;
     margin-right: 10px;
     background-color: #DCB239;
-    color: black ;
+    color: white ;
     text-decoration: none;
     border-radius: 5px;
 }
   
 .button:hover {
-    background-color: #DCB239;
+    background-color: #bf9107;
 }
 

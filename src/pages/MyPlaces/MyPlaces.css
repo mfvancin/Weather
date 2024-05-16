@@ -4,6 +4,7 @@
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 90px;
 }
   
 .city-link {
@@ -12,6 +13,7 @@
   
 .city-container button {
     margin: 20px;
+    outline: none;
 }
   
 .add-city-button {
@@ -25,6 +27,7 @@
     cursor: pointer;
     width: 100px;
     margin-bottom: 20px;
+    outline: none;
 }
   
 .add-city-button:hover {
@@ -44,4 +47,21 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 250px;
+}
+.save-cancel-button {
+    color: white;
+    background-color: rgb(49, 202, 49);
+    outline: none;
+}
+
+.save-cancel-button:hover {
+    background-color: rgb(39, 162, 39);
+    border: none;
+    outline: none;
+}
+
+.edit-deletet-button:hover {
+    background-color: #bf9107;
+    border: none;
+    outline: none;
 }

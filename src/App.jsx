@@ -4,6 +4,7 @@ import "./App.css";
 
 import Header from "./components/Header/Index"; 
 import Footer from "./components/Footer/Index"; 
+import FullScreenForecast from "./components/FullScreen/Index";
 
 import Homepage from "./pages/Homepage/Index";
 import MyPlaces from "./pages/MyPlaces/Index";
@@ -19,6 +20,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Homepage/>} />
       <Route path="/MyPlaces" element={<MyPlaces/>} />
+      <Route path="/forecast/:cityName" element={<FullScreenForecast />} />
       <Route path="/Add" element={<Add/>} />
       <Route path="/About" element={<About/>} />
     </Routes>
