@@ -73,12 +73,13 @@ function MyPlaces() {
               name: editedCityName,
               temperature: data.main.temp,
               weatherDescription: data.weather[0].description,
-              icon: getWeatherIcon(data.list[0].weather[0].main),
+              icon: getWeatherIcon(data.weather[0].main),
             };
           }
           return city;
         });
         setCities(updatedCities);
+        localStorage.setItem("cities", JSON.stringify(updatedCities));
         setEditedCityIndex(null);
         setEditedCityName("");
       } catch (error) {
@@ -86,6 +87,7 @@ function MyPlaces() {
       }
     }
   };
+  
 
   const handleCancelEdit = () => {
     setEditedCityIndex(null);
@@ -96,7 +98,14 @@ function MyPlaces() {
     const newCities = [...cities];
     newCities.splice(index, 1);
     setCities(newCities);
+    localStorage.setItem("cities", JSON.stringify(newCities));
   };
+  
+  useEffect(() => {
+    const storedCities = JSON.parse(localStorage.getItem("cities")) || [];
+    setCities(storedCities);
+  }, []);
+  
 
   const handleAddCity = async (newCity) => {
     try {
@@ -110,13 +119,17 @@ function MyPlaces() {
         weatherDescription: data.weather[0].description,
         icon: getWeatherIcon(data.weather[0].main),
       };
-      setCityProps(newCity)
-      setCities([...cities, cityWeather]);
+      setCityProps(newCity);
+      const updatedCities = [...cities, cityWeather];
+      setCities(updatedCities);
+      localStorage.setItem("cities", JSON.stringify(updatedCities));
       setShowAddCity(false);
     } catch (error) {
       console.error("Error fetching weather data:", error);
     }
   };
+  
+  
 
   return (
     <div>
@@ -140,7 +153,7 @@ function MyPlaces() {
                 </div>
               ) : (
                 <h2>
-                <Link to={`/forecast/${city.name}`} state={{ cityName: cityProps }}>{city.name}</Link>
+                <Link to={`/forecast/${city.name}`} state={{ cityName: city.name }}>{city.name}</Link>
                 </h2>
               )}
               {editedCityIndex !== index && (
