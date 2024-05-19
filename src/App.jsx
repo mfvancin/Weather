@@ -2,14 +2,14 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import Header from "./components/Header/Index"; 
-import Footer from "./components/Footer/Index"; 
-import FullScreenForecast from "./components/FullScreen/Index";
+import Header from "./components/Header"; 
+import Footer from "./components/Footer"; 
+import FullScreenForecast from "./components/FullScreen";
 
-import Homepage from "./pages/Homepage/Index";
-import MyPlaces from "./pages/MyPlaces/Index";
-import Add from "./pages/Add/Index";
-import About from "./pages/About/Index";
+import Homepage from "./pages/Homepage";
+import MyPlaces from "./pages/MyPlaces";
+import Add from "./pages/Add";
+import About from "./pages/About";
 
 
 function App() {

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom"; 
 import "./MyPlaces.css";
-import AddCity from "../Add/Index";
-import FullScreenForecast from "../../components/FullScreen/Index";
+import AddCity from "../Add";
+import FullScreenForecast from "../../components/FullScreen";
 
 const API_KEY = "7bb7d3b36d456fadf0a0956b1dfd752c";
 

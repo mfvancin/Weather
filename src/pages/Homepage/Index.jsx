@@ -1,5 +1,5 @@
 import React from "react";
-import City from "../../components/City/Index";
+import City from "../../components/City";
 
 const App = () => {
   return (
