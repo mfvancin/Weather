@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./City.css";
+import Sunny from "../../../public/images/sunny.png";
+import Cloudy from "../../../public/images/cloudy.png";
+import Rainy from "../../../public/images/rainy.png";
+import Snowy from "../../../public/images/snowy.png";
+import Windy from "../../../public/images/windy.png";
+import Default from "../../../public/images/default.png";
 
 const API_KEY = "7bb7d3b36d456fadf0a0956b1dfd752c";
 
@@ -25,18 +31,18 @@ const City = ({ cityName }) => {
   const getWeatherImage = (weatherCondition) => {
     switch (weatherCondition) {
       case "Clear":
-        return "public/images/sunny.png";
+        return Sunny;
       case "Clouds":
-        return "public/images/cloudy.png";
+        return Cloudy;
       case "Rain":
       case "Drizzle":
-        return "public/images/rainy.png";
+        return Rainy;
       case "Snow":
-        return "public/images/snowy.png";
+        return Snowy;
         case "Wind":
-          return "public/images/windy.png";
+          return Windy;
         default:
-          return "public/images/default.png";
+          return Default;
     }
   };
 
