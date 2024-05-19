@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <h1><img className="header-image" src="src/images/WeatherLogo.png"/></h1>
+        <h1><img className="header-image" src="public/images/WeatherLogo.png"/></h1>
         <nav>
           <ul className="nav-list">
             <li className="nav-item">

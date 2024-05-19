@@ -25,18 +25,18 @@ const City = ({ cityName }) => {
   const getWeatherImage = (weatherCondition) => {
     switch (weatherCondition) {
       case "Clear":
-        return "src/images/sunny.png";
+        return "public/images/sunny.png";
       case "Clouds":
-        return "src/images/cloudy.png";
+        return "public/images/cloudy.png";
       case "Rain":
       case "Drizzle":
-        return "src/images/rainy.png";
+        return "public/images/rainy.png";
       case "Snow":
-        return "src/images/snowy.png";
+        return "public/images/snowy.png";
         case "Wind":
-          return "src/images/windy.png";
+          return "public/images/windy.png";
         default:
-          return "src/images/default.png";
+          return "public/images/default.png";
     }
   };
 

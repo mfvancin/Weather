@@ -30,18 +30,18 @@ const FullScreenForecast = ({  onBack }) => {
   const getWeatherImage = (weatherCondition) => {
     switch (weatherCondition) {
       case "Clear":
-        return "/src/images/sunny.png";
+        return "/images/sunny.png";
       case "Clouds":
-        return "/src/images/cloudy.png";
+        return "/images/cloudy.png";
       case "Rain":
       case "Drizzle":
-        return "/src/images/rainy.png";
+        return "/images/rainy.png";
       case "Snow":
-        return "/src/images/snowy.png";
+        return "/images/snowy.png";
       case "Wind":
-        return "/src/images/windy.png";
+        return "/images/windy.png";
       default:
-        return "/src/images/default.png";
+        return "/images/default.png";
     }
   };
 
