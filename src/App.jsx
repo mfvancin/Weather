@@ -11,8 +11,6 @@ import MyPlaces from "./pages/MyPlaces";
 import Add from "./pages/Add";
 import About from "./pages/About";
 
-// teste
-
 function App() {
 
   return(
