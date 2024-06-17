@@ -47,6 +47,7 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 250px;
+    background-color: rgb(23, 36, 66)
 }
 .save-cancel-button {
     color: white;
