@@ -1,13 +1,12 @@
 import React from "react";
 import "./About.css";
-import "../../../public/images/manu.png";
 
 function About() {
   return (
     <div className="container">
       <h2>Meet The Dev</h2>
       <div className="picture">
-        <img className="picture" src="../../../public/images/manu.png"/>
+        {/* <img className="picture" src="../../../public/images/manu.png"/> */}
         <a
           href="https://github.com/mfvancin"
           target="_blank"
