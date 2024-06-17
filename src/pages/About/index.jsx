@@ -6,7 +6,7 @@ function About() {
     <div className="container">
       <h2>Meet The Dev</h2>
       <div className="picture">
-        <img className="picture" src="../../../../public/images/manu.jpeg"/>
+        <img className="picture" src="../../../public/images/manu.jpeg"/>
         <a
           href="https://github.com/mfvancin"
           target="_blank"
